@@ -3,12 +3,18 @@ package com.communityvscovid.lpts.schedule;
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
 import com.communityvscovid.lpts.doctor.Doctor;
 
 @Entity
 public class Schedule {
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Long id;
 	@ManyToOne
 	private Doctor doctor;
 	private Integer day;
