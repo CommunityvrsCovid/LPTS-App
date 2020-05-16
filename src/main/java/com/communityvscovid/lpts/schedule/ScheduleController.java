@@ -26,7 +26,7 @@ public class ScheduleController {
 	}
 	
 	@RequestMapping(method=RequestMethod.DELETE, value="doctors/{doctorId}/schedules/")
-	public void delete(@PathVariable Long id) {
-		service.delete(id);
+	public void delete(@PathVariable Long doctorId) {
+		service.deleteByDoctorId(new Doctor(doctorId, null, null));
 	}
 }

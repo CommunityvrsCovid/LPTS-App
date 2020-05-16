@@ -14,6 +14,16 @@ public class Token {
 	private String preferredLanguage;
 	private Boolean isSlotAllotted;
 
+	public Token() {
+	}
+
+	public Token(Long id, String name, String preferredLanguage, Boolean isSlotAllotted) {
+		this.id = id;
+		this.name = name;
+		this.preferredLanguage = preferredLanguage;
+		this.isSlotAllotted = isSlotAllotted;
+	}
+
 	public Long getId() {
 		return id;
 	}

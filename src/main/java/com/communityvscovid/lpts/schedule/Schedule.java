@@ -20,6 +20,20 @@ public class Schedule {
 	private Integer day;
 	private Date startTime;
 	private Date endTime;
+
+	public Schedule() {
+	}
+
+	public Schedule(Long id, Doctor doctor, Integer day, Date startTime, Date endTime,
+			Integer noOfAppointmentsAllowed) {
+		this.id = id;
+		this.doctor = doctor;
+		this.day = day;
+		this.startTime = startTime;
+		this.endTime = endTime;
+		this.noOfAppointmentsAllowed = noOfAppointmentsAllowed;
+	}
+
 	private Integer noOfAppointmentsAllowed;
 
 	public Doctor getDoctor() {

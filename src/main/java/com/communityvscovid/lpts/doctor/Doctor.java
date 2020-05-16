@@ -16,7 +16,10 @@ public class Doctor {
 	private String name;
 	@ManyToOne
 	private Department department;
-	
+
+	public Doctor() {
+	}
+
 	public Doctor(Long id, String name, Department department) {
 		this.id = id;
 		this.name = name;

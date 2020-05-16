@@ -22,7 +22,7 @@ public class ScheduleService {
 		return repository.saveAll(entities);
 	}
 	
-	public void delete(Long id) {
-		repository.deleteById(id);
+	public void deleteByDoctorId(Doctor doctor) {
+		repository.deleteByDoctorId(doctor);
 	}
 }
